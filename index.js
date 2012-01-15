@@ -13,17 +13,15 @@ module.exports = function makeParser() {
   var listener = null
   
   function maybeStartCapture() {
-    if (path.length === 0) return
+    if (path.length === 0 || listener) return
     var key1 = path.join('.')
     var key2 = path.slice(0, -1).join('.')+'.'
     if (has(listeners, key1)) {
-      if (listener) throw new Error('multiple active listeners at a time not supported yet')
       listener = listeners[key1]
       stack = []
     }
     if (has(listeners, key2)) {
       if (DEBUG) console.log('pathlen: '+path.length)
-      if (listener) throw new Error('multiple active listeners at a time not supported yet')
       listener = listeners[key2]
       stack = []
     }
