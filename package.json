@@ -1,0 +1,15 @@
+{
+  "author": "Jann Horn <jannhorn@googlemail.com>",
+  "name": "clarinobjects",
+  "description": "Make objects from stuff inside a JSON stream",
+  "version": "0.1.0",
+  "homepage": "https://github.com/thejh/node-clarinobjects",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thejh/node-clarinobjects.git"
+  },
+  "dependencies": {
+    "clarinet": "*"
+  },
+  "devDependencies": {}
+}
